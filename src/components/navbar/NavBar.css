@@ -1,0 +1,75 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing%20Script);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+.neonText {
+  color: beige;
+  text-shadow: 0 0 7px #e4e, 0 0 10px #e4c, 0 0 21px #e4c, 0 0 42px #e44ec3,
+    0 0 82px #e44ec3, 0 0 92px #e44ec3, 0 0 102px #e44ec3, 0 0 151px #e44ec3;
+}
+
+.myNavbar {
+  background-color: #5a0834;
+}
+
+.myNavBrand {
+  font-family: 'Dancing Script', serif;
+  font-size: 3rem;
+}
+
+.myColor {
+  color: beige;
+}
+
+.myColor:hover {
+  color: #adad99;
+}
+
+.myFlex {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logoHolder {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circle {
+  width: 60px;
+  height:60px;
+  border: 3px solid beige;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#5a0834, #9d0b51, #e44ec3);
+}
+
+.brandName {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Lobster', serif;
+  color: beige;
+}
+
+.cursorHover:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .logoHolder {
+    width: 70px;
+    height: 70px;
+  }
+  .circle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brandName {
+    font-size: 1.3rem;
+  }
+}
