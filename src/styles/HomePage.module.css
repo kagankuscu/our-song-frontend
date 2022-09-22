@@ -1,0 +1,44 @@
+@import url(https://fonts.googleapis.com/css?family=Dancing%20Script);
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 88.6%;
+  font-size: 5em;
+  font-family: 'Dancing Script';
+
+  background: url('https://images.unsplash.com/photo-1563089145-599997674d42?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80')
+    no-repeat;
+  background-size: 100% 100%;
+}
+
+.container {
+  width: 100vh;
+  height: 38vh;
+  border: 2px solid linear-gradient(to left, #e4c, #e44ec3, #5a0834);
+  border-radius: 30px;
+  background: linear-gradient(to left, #ee44ccbf, #e44ec3bf, #5a0834bf);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 7px #e4e, 0 0 10px #e4c, 0 0 21px #e4c, 0 0 42px #e44ec3,
+    0 0 100px #e44ec3, 0 0 150px #e44ec3, 0 0 200px #e44ec3, 0 0 230px #e44ec3;
+  text-shadow: 0 0 7px #e4e, 0 0 10px #e4c, 0 0 21px #e4c, 0 0 42px #e44ec3,
+    0 0 82px #e44ec3, 0 0 92px #e44ec3, 0 0 102px #e44ec3, 0 0 151px #e44ec3;
+}
+
+.welcomeText {
+  color: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  .body {
+    font-size: 3em;
+  }
+  .container {
+    width: 50vh;
+    height: 17vh;
+  }
+}
