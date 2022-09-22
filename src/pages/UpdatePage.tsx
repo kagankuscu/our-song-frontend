@@ -1,0 +1,24 @@
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { UpdateComponent } from '../components/update/UpdateComponent';
+import { Song } from '../models/SongModel';
+interface UpdatePageProps {}
+
+export const UpdatePage: React.FC<UpdatePageProps> = ({}) => {
+  const { id } = useParams();
+  const [loading, setLoading] = useState<boolean>(true);
+  const [song, setSong] = useState<Song>();
+  useEffect(() => {
+    const getData = async () => {
+      const data = await axios.get(
+        `http://192.168.0.4:4041/songs/songId/${id}`
+      );
+
+      setSong(data.data.result);
+      setLoading(false);
+    };
+    getData();
+  }, []);
+  return <>{loading ? <h1>Loading</h1> : <UpdateComponent song={song!} />}</>;
+};

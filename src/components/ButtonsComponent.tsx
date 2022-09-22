@@ -29,7 +29,7 @@ export const ButtonsComponent: React.FC<ButtonsComponentProps> = ({ song }) => {
       </Link>
       <Link
         to="/"
-        className="btn btn-fs"
+        className="btn btn-fs btn-danger"
         onClick={() => handleDeleteSong(song._id)}
       >
         Delete

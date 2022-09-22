@@ -5,6 +5,7 @@ import { NavBarComponent } from './components/navbar/NavBarComponent';
 import 'bootstrap/dist/css/bootstrap.css'
 import { AllSongPage } from './pages/AllSongPage';
 import { SongPage } from './pages/SongPage';
+import { UpdatePage } from './pages/UpdatePage';
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
       <Route path="/allsongs" element={<AllSongPage />} />
       <Route path="/song/:id" element={<SongPage />} />
       <Route path="/randomsongs" element={<AllSongPage />} />
-      <Route path="/updatesongs" element={<AllSongPage />} />
+      <Route path="/updatesong/:id" element={<UpdatePage />} />
     </Routes>
     </>
   );
