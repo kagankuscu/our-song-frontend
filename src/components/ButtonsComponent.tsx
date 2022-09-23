@@ -21,16 +21,19 @@ export const ButtonsComponent: React.FC<ButtonsComponentProps> = ({ song }) => {
         href={song.Url}
         target="_blank"
         rel="noopener noreferrer"
-        className={`btn ${style.btnFs} ${style.aLink}`}
+        className={`${style.btn} ${style.btnFs} ${style.btnOutline}`}
       >
         Open
       </a>
-      <Link to={'/updatesong/' + song._id} className={`btn ${style.btnFs}`}>
+      <Link
+        to={'/updatesong/' + song._id}
+        className={`${style.btn} ${style.btnFs} ${style.btnSuccess}`}
+      >
         Update
       </Link>
       <Link
         to="/"
-        className={`btn btn-danger ${style.btnFs}`}
+        className={`${style.btn} ${style.btnDanger} ${style.btnFs}`}
         onClick={() => handleDeleteSong(song._id)}
       >
         Delete

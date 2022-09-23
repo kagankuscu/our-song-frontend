@@ -7,12 +7,55 @@
   font-size: var(--btn-fs-normal);
 }
 
-.aLink {
+.btn {
   text-decoration: none;
   color: black;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  font-weight: 500;
+  margin: 0;
+  outline: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  line-height: 20px;
+  list-style: none;
 }
 
-.aLink:link {
-  text-decoration: none;
-  color: black;
+.btnSuccess {
+  background-color: #e44ec3;
+  color:beige
+}
+
+.btnOutline{
+  outline: 2px solid;
+}
+
+.btnDanger {
+  background-color: red;
+  color:beige
+}
+
+.btnDanger:hover,
+:focus {
+  color:beige;
+  background-color: darkred;
+}
+
+.btnSuccess:hover,
+:focus {
+  color:beige;
+  background-color: #e44ec38b;
+}
+
+
+.btnOutline:hover,
+:focus {
+  color:beige;
 }
