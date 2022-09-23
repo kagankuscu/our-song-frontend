@@ -1,8 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing%20Script);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
+:root {
+  --my-beige-color:beige;
+  --link-color: var(--my-beige-color);
+  --link-hover-color: #adad99;
+}
 
 .neonText {
-  color: beige;
+  color: var(--my-beige-color);
   text-shadow: 0 0 7px #e4e, 0 0 10px #e4c, 0 0 21px #e4c, 0 0 42px #e44ec3,
     0 0 82px #e44ec3, 0 0 92px #e44ec3, 0 0 102px #e44ec3, 0 0 151px #e44ec3;
 }
@@ -16,18 +21,17 @@
   font-size: 3rem;
 }
 
-.myColor {
-  color: beige;
-}
-
-.myColor:hover {
-  color: #adad99;
-}
-
 .myFlex {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.linkColor{
+  color:var(--link-color) !important;
+}
+.linkColor:hover{
+  color: var(--link-hover-color) !important;
 }
 
 .logoHolder {
@@ -39,8 +43,8 @@
 }
 .circle {
   width: 60px;
-  height:60px;
-  border: 3px solid beige;
+  height: 60px;
+  border: 3px solid var(--my-beige-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -52,7 +56,7 @@
   font-size: 2rem;
   font-weight: 600;
   font-family: 'Lobster', serif;
-  color: beige;
+  color: var(--my-beige-color);
 }
 
 .cursorHover:hover {

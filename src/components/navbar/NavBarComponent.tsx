@@ -1,21 +1,30 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavBar.css';
 import styles from '../../styles/Style.module.css';
+import navbarStyle from '../../styles/NavBarComponent.module.css';
+
 interface NavBarComponentProps {}
 
 export const NavBarComponent: React.FC<NavBarComponentProps> = ({}) => {
   return (
-    <nav className='navbar bg-ligth myNavbar'>
-      <div className='container-fluid'>
-        <Link to="/#" className='navbar-brand'>
-          <div className="myFlex">
-            <div className="logoHolder">
-              <div className="circle cursorHover">
-                <div className={"brandName cursorHover " + styles.preventSelect}>KE</div>
+    <nav className={`navbar bg-ligth ${navbarStyle.myNavbar}`}>
+      <div className="container-fluid">
+        <Link to="/#" className="navbar-brand">
+          <div className={navbarStyle.myFlex}>
+            <div className={navbarStyle.logoHolder}>
+              <div
+                className={`${navbarStyle.circle} ${navbarStyle.cursorHover}`}
+              >
+                <div
+                  className={`${navbarStyle.brandName} ${navbarStyle.cursorHover} ${styles.preventSelect}`}
+                >
+                  KE
+                </div>
               </div>
             </div>
-            <h1 className={"neonText myNavBrand cursorHover " + styles.preventSelect}>
+            <h1
+              className={`${navbarStyle.neonText} ${navbarStyle.myNavBrand} ${navbarStyle.cursorHover} ${styles.preventSelect}`}
+            >
               Our Song
             </h1>
           </div>
@@ -23,7 +32,7 @@ export const NavBarComponent: React.FC<NavBarComponentProps> = ({}) => {
         <ul className="nav">
           <li key={'allsong'} className="nav-item">
             <Link
-              className='nav-link myColor'
+              className={`nav-link ${navbarStyle.linkColor}`}
               aria-current="page"
               to="/allsongs"
             >
@@ -31,12 +40,12 @@ export const NavBarComponent: React.FC<NavBarComponentProps> = ({}) => {
             </Link>
           </li>
           <li key={'addsong'} className="nav-item">
-            <Link className='nav-link myColor' to="/addsongs">
+            <Link className={`nav-link ${navbarStyle.linkColor}`} to="/addsongs">
               Add Song
             </Link>
           </li>
           <li key={'randomsong'} className="nav-item">
-            <Link className={'nav-link myColor'} to="/randomsong">
+            <Link className={`nav-link ${navbarStyle.linkColor}`} to="/randomsong">
               Random Song
             </Link>
           </li>
