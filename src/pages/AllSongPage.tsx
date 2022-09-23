@@ -20,5 +20,5 @@ export const AllSongPage: React.FC<AllSongProps> = ({}) => {
       window.removeEventListener('resize', resizeListener);
     };
   }, []);
-  return <ListComponent isMobile={width<600}/>;
+  return <ListComponent isMobile={width<800}/>;
 };
