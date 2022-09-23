@@ -4,12 +4,6 @@
   text-align: center;
 }
 
-.btnContainer {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-}
-
 #item:hover {
   background-color: #e44ec3;
   color: beige;

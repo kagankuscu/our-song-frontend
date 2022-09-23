@@ -16,7 +16,7 @@ export const ButtonsComponent: React.FC<ButtonsComponentProps> = ({ song }) => {
     }
   };
   return (
-    <>
+    <div className={style.btnContainer}>
       <a
         href={song.Url}
         target="_blank"
@@ -38,6 +38,6 @@ export const ButtonsComponent: React.FC<ButtonsComponentProps> = ({ song }) => {
       >
         Delete
       </Link>
-    </>
+    </div>
   );
 };
