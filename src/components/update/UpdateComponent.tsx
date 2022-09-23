@@ -13,7 +13,7 @@ export const UpdateComponent: React.FC<UpdateComponentProps> = ({ song }) => {
       <div className="card">
         <div className="card-body">
           <h5 className="card-title" style={{fontSize:'3rem',paddingBottom:'2rem'}}>Update </h5>
-          <form className={styles.form_container}>
+          <form className={styles.formContainer}>
             <input type="text" name="Singer" value={song.Singer} />
             <input type="text" name="SongName" value={song.SongName} />
             <input type="text" name="WhoLike" value={song.WhoLike} />

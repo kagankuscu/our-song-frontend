@@ -1,8 +1,4 @@
-.card {
-  width: 18rem;
-}
-
-.form_container {
+.formContainer {
   display: flex;
   flex-direction: column;
   gap: 1rem;

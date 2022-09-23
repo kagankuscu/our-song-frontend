@@ -29,12 +29,12 @@ export const UpdateButtonComponent: React.FC<UpdateButtonComponentProps> = ({
     <>
       <Link
         to={'/song/' + song._id}
-        className={'btn btn-fs ' + styles.btnSuccess}
+        className={`btn ${styles.btnSuccess}`}
         onClick={() => handleSaved(song._id)}
       >
         Save
       </Link>
-      <Link to={'/song/' + song._id} className={"btn btn-fs " + styles.btnCancel}>
+      <Link to={'/song/' + song._id} className={`btn ${styles.btnCancel}`}>
         Cancel
       </Link>
     </>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './List.css';
+import styles from '../../styles/ListComponent.module.css';
 import axios from 'axios';
 import { DesktopComponent } from './DesktopComponent';
 import { Song } from '../../models/SongModel';
@@ -19,9 +19,9 @@ export const ListComponent: React.FC<ListComponentProps> = ({ isMobile }) => {
     getData();
   }, []);
   return (
-    <div id="lists">
+    <div id={styles.lists}>
       <ul className="list-group">
-        <li className={'list-group-item colHeader'}>
+        <li className={`list-group-item ${styles.colHeader}`}>
           <div className="container">
             <div className="row align-item-start">
               <div className={'col'}>Singer</div>
@@ -54,7 +54,11 @@ const List: React.FC<ListProps> = ({ song, isMobile }) => {
     }
   };
   return (
-    <li className={'list-group-item'} id="item" onClick={() => handleClick(song._id)}>
+    <li
+      className={'list-group-item'}
+      id={styles.item}
+      onClick={() => handleClick(song._id)}
+    >
       <div className="container">
         <div className="row align-item-start">
           <div className="col">{song.Singer}</div>

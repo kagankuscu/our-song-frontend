@@ -1,0 +1,18 @@
+:root {
+  --btn-fs-normal: 1.32rem;
+  --btn-fs-small: 0.89rem;
+}
+
+.btnFs {
+  font-size: var(--btn-fs-normal);
+}
+
+.aLink {
+  text-decoration: none;
+  color: black;
+}
+
+.aLink:link {
+  text-decoration: none;
+  color: black;
+}

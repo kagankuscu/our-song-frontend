@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { Song } from '../models/SongModel';
+import style from '../styles/Button.module.css';
 
 interface ButtonsComponentProps {
   song: Song;
@@ -20,16 +21,16 @@ export const ButtonsComponent: React.FC<ButtonsComponentProps> = ({ song }) => {
         href={song.Url}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn btn-fs aLink"
+        className={`btn ${style.btnFs} ${style.aLink}`}
       >
         Open
       </a>
-      <Link to={'/updatesong/' + song._id} className="btn btn-fs">
+      <Link to={'/updatesong/' + song._id} className={`btn ${style.btnFs}`}>
         Update
       </Link>
       <Link
         to="/"
-        className="btn btn-fs btn-danger"
+        className={`btn btn-danger ${style.btnFs}`}
         onClick={() => handleDeleteSong(song._id)}
       >
         Delete
