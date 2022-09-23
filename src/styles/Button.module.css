@@ -1,6 +1,8 @@
 :root {
   --btn-fs-normal: 1.32rem;
   --btn-fs-small: 0.89rem;
+  --my-pink-100: #e44ec3;
+  --my-pink-200: #5a0834;
 }
 
 .btnFs {
@@ -35,33 +37,34 @@
 }
 
 .btnSuccess {
-  background-color: #e44ec3;
-  color:beige
+  background-color: var(--my-pink-100);
+  color: beige;
 }
 
-.btnOutline{
-  outline: 2px solid;
+.btnOutline {
+  background-color: blueviolet;
+  color: beige;
 }
 
 .btnDanger {
   background-color: red;
-  color:beige
+  color: beige;
 }
 
 .btnDanger:hover,
 :focus {
-  color:beige;
+  color: beige;
   background-color: darkred;
 }
 
 .btnSuccess:hover,
 :focus {
-  color:beige;
-  background-color: #5a0834;
+  color: beige;
+  background-color: var(--my-pink-200);
 }
-
 
 .btnOutline:hover,
 :focus {
-  color:beige;
+  color: beige;
+  background-color: darkslateblue;
 }

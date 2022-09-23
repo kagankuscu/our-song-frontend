@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Song } from '../../models/SongModel';
 import styles from '../../styles/UpdateComponent.module.css';
+import btnStyle from '../../styles/Button.module.css';
 
 interface UpdateButtonComponentProps {
   song: Song;
