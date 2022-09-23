@@ -2,7 +2,6 @@ import axios from 'axios';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Song } from '../../models/SongModel';
-import styles from '../../styles/UpdateComponent.module.css';
 import btnStyle from '../../styles/Button.module.css';
 
 interface UpdateButtonComponentProps {
@@ -16,7 +15,7 @@ export const UpdateButtonComponent: React.FC<UpdateButtonComponentProps> = ({
     const con = window.confirm('Are you sure to update?');
     if (con) {
       const data = await axios.put(
-        `http://192.168.0.4:4041/songs/songId/${id}`,
+        `${process.env.REACT_APP_SONGID}/${id}`,
         song
       );
       if (data.data.result.modifiedCount > 0) {
@@ -30,12 +29,12 @@ export const UpdateButtonComponent: React.FC<UpdateButtonComponentProps> = ({
     <>
       <Link
         to={'/song/' + song._id}
-        className={`btn ${styles.btnSuccess}`}
+        className={`${btnStyle.btn} ${btnStyle.btnSuccess}`}
         onClick={() => handleSaved(song._id)}
       >
         Save
       </Link>
-      <Link to={'/song/' + song._id} className={`btn ${styles.btnCancel}`}>
+      <Link to={'/song/' + song._id} className={`${btnStyle.btn} ${btnStyle.btnOutline}`}>
         Cancel
       </Link>
     </>

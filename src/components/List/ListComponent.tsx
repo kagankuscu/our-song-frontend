@@ -12,7 +12,7 @@ export const ListComponent: React.FC<ListComponentProps> = ({ isMobile }) => {
   const [listOfSong, setListOfSong] = useState<Song[] | undefined>();
   useEffect(() => {
     const getData = async () => {
-      const data = await axios.get('http://192.168.0.4:4041/songs');
+      const data = await axios.get(`${process.env.REACT_APP_SONGS}`);
 
       setListOfSong(data.data.result);
     };
