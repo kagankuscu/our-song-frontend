@@ -12,7 +12,7 @@ export const UpdatePage: React.FC<UpdatePageProps> = ({}) => {
   useEffect(() => {
     const getData = async () => {
       const data = await axios.get(
-        `http://192.168.0.4:4041/songs/songId/${id}`
+        `${process.env.REACT_APP_SONGID}/${id}`
       );
 
       setSong(data.data.result);
