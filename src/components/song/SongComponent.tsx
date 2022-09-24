@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonsComponent } from '../ButtonsComponent';
+import { ButtonsComponent } from '../buttons/ButtonsComponent';
 import { Song } from '../../models/SongModel';
 
 interface SongComponentProps {

@@ -40,7 +40,7 @@ export const NavBarComponent: React.FC<NavBarComponentProps> = ({}) => {
             </Link>
           </li>
           <li key={'addsong'} className="nav-item">
-            <Link className={`nav-link ${navbarStyle.linkColor}`} to="/addsongs">
+            <Link className={`nav-link ${navbarStyle.linkColor}`} to="/addsong">
               Add Song
             </Link>
           </li>
