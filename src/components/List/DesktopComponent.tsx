@@ -1,6 +1,6 @@
 import React from 'react';
 import { Song } from '../../models/SongModel';
-import { ButtonsComponent } from '../ButtonsComponent';
+import { ButtonsComponent } from '../buttons/ButtonsComponent';
 
 interface DesktopComponentProps {
   song: Song;
