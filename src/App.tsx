@@ -7,6 +7,7 @@ import { AllSongPage } from './pages/AllSongPage';
 import { SongPage } from './pages/SongPage';
 import { UpdatePage } from './pages/UpdatePage';
 import { AddSongPage } from './pages/AddSongPage';
+import { RandomPage } from './pages/RandomPage';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <Route path="/allsongs" element={<AllSongPage />} />
       <Route path="/song/:id" element={<SongPage />} />
       <Route path="/addsong" element={<AddSongPage />} />
-      <Route path="/randomsongs" element={<AllSongPage />} />
+      <Route path="/randomsong" element={<RandomPage />} />
       <Route path="/updatesong/:id" element={<UpdatePage />} />
     </Routes>
     </>
