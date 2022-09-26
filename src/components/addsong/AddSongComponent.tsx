@@ -32,27 +32,27 @@ export const AddSongComponent: React.FC = () => {
             Add Song{' '}
           </h5>
           <form className={styles.formContainer}>
-            <label>Singer Name:</label>
+            <label className='add-song-label'>Singer Name:</label>
             <input
               type="text"
               name="Singer"
               placeholder=""
               onChange={handleChange}
             />
-            <label>Song Name:</label>
+            <label className='add-song-label'>Song Name:</label>
             <input
               type="text"
               name="SongName"
               placeholder=""
               onChange={handleChange}
             />
-            <label>Who Like the this song:</label>
+            <label className='add-song-label'>Who Like the this song:</label>
             <select name="WhoLike" onChange={handleChange}>
               <option value="Empty"></option>
               <option value="Kagan">Kagan</option>
               <option value="Emine">Emine</option>
             </select>
-            <label>Url:</label>
+            <label className='add-song-label'>Url:</label>
             <input
               type="text"
               name="Url"
