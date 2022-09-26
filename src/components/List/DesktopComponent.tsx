@@ -1,12 +1,8 @@
 import React from 'react';
-import { Song } from '../../models/SongModel';
+import { IList } from '../../interface/List/IList';
 import { ButtonsComponent } from '../buttons/ButtonsComponent';
 
-interface DesktopComponentProps {
-  song: Song;
-}
-
-export const DesktopComponent: React.FC<DesktopComponentProps> = ({ song }) => {
+export const DesktopComponent: React.FC<IList> = ({ song }) => {
   return (
     <div className="col">
       <ButtonsComponent song={song} />
