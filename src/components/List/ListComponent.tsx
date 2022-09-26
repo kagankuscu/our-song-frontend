@@ -1,14 +1,12 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { ILists } from '../../interface/List/ILists';
 import { Song } from '../../models/SongModel';
 import styles from '../../styles/ListComponent.module.css';
 import { List } from './List';
 import { Listheader } from './Listheader';
-interface ListComponentProps {
-  isMobile: boolean;
-}
 
-export const ListComponent: React.FC<ListComponentProps> = ({ isMobile }) => {
+export const ListComponent: React.FC<ILists> = ({ isMobile }) => {
   const [listOfSong, setListOfSong] = useState<Song[] | undefined>();
   useEffect(() => {
     const getData = async () => {

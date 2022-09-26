@@ -1,16 +1,12 @@
 import React from 'react';
-import { Song } from '../../models/SongModel';
+import { ISong } from '../../interface/Song/ISong';
 import { ButtonsComponent } from '../buttons/ButtonsComponent';
 import { Frame } from '../Frame/Frame';
 
-interface RandomProps {
-  song: Song;
-}
-
-export const Random: React.FC<RandomProps> = ({ song }) => {
+export const Random: React.FC<ISong> = ({ song }) => {
   return (
     <>
-      <Frame url={song.Url}/>
+      <Frame url={song.Url} />
       <div className="container">
         <div className="card">
           <div className="card-body">

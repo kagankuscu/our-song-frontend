@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 import styles from '../../styles/Style.module.css';
 import navbarStyle from '../../styles/NavBarComponent.module.css';
 
-interface NavBarComponentProps {}
-
-export const NavBarComponent: React.FC<NavBarComponentProps> = ({}) => {
+export const NavBarComponent: React.FC = ({}) => {
   return (
     <nav className={`navbar bg-ligth ${navbarStyle.myNavbar}`}>
       <div className="container-fluid">
@@ -45,7 +43,10 @@ export const NavBarComponent: React.FC<NavBarComponentProps> = ({}) => {
             </Link>
           </li>
           <li key={'randomsong'} className="nav-item">
-            <Link className={`nav-link ${navbarStyle.linkColor}`} to="/randomsong">
+            <Link
+              className={`nav-link ${navbarStyle.linkColor}`}
+              to="/randomsong"
+            >
               Random Song
             </Link>
           </li>

@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { IFrame } from '../../interface/Frame/IFrame';
 
-interface FrameProps {
-  url: string;
-}
-
-export const Frame: React.FC<FrameProps> = ({ url }) => {
+export const Frame: React.FC<IFrame> = ({ url }) => {
   const [src, setSrc] = useState<string>('');
   function splitUrl(): void {
     const youtubeEmbed = 'https://www.youtube.com/embed/';
