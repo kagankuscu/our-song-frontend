@@ -3,10 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { Random } from '../components/Random/Random';
 import { Song } from '../models/SongModel';
 
-interface RandomPageProps {}
-
-export const RandomPage: React.FC<RandomPageProps> = ({}) => {
-  const [song, setSong] = useState<Song>({Singer:'',Url:'',WhoLike:'',_id:'',SongName:''});
+export const RandomPage: React.FC = ({}) => {
+  const [song, setSong] = useState<Song>({
+    Singer: '',
+    Url: '',
+    WhoLike: '',
+    _id: '',
+    SongName: '',
+  });
   const [loading, setLoading] = useState<boolean>(true);
   const [songs, setSongs] = useState<Song[]>([]);
   useEffect(() => {
