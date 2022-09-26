@@ -52,19 +52,19 @@
 }
 
 .btnDanger:hover,
-:focus {
+.btnDanger:focus {
   color: beige;
   background-color: darkred;
 }
 
 .btnSuccess:hover,
-:focus {
+.btnSuccess:focus {
   color: beige;
   background-color: var(--my-pink-200);
 }
 
 .btnOutline:hover,
-:focus {
+.btnOutline:focus {
   color: beige;
   background-color: darkslateblue;
 }
