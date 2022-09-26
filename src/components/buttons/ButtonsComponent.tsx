@@ -1,8 +1,10 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
+import React from 'react';
 import { Song } from '../../models/SongModel';
 import style from '../../styles/Button.module.css';
+import { Delete } from './Delete';
+import { Open } from './Open';
+import { Update } from './Update';
 
 interface ButtonsComponentProps {
   song: Song;
@@ -17,27 +19,9 @@ export const ButtonsComponent: React.FC<ButtonsComponentProps> = ({ song }) => {
   };
   return (
     <div className={style.btnContainer}>
-      <a
-        href={song.Url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className={`${style.btn} ${style.btnFs} ${style.btnOutline}`}
-      >
-        Open
-      </a>
-      <Link
-        to={'/updatesong/' + song._id}
-        className={`${style.btn} ${style.btnFs} ${style.btnSuccess}`}
-      >
-        Update
-      </Link>
-      <Link
-        to="/"
-        className={`${style.btn} ${style.btnDanger} ${style.btnFs}`}
-        onClick={() => handleDeleteSong(song._id)}
-      >
-        Delete
-      </Link>
+      <Open song={song} />
+      <Update path='/updatesong/' song={song} />
+      <Delete path='/' song={song} onClick={() => handleDeleteSong(song._id)} />
     </div>
   );
 };

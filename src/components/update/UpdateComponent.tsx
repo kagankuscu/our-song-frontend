@@ -1,6 +1,6 @@
 import React from 'react';
 import { Song } from '../../models/SongModel';
-import { UpdateButtonComponent } from './UpdateButtonComponent';
+import { UpdateButtonComponent } from '../buttons/UpdateButtonComponent';
 import styles from '../../styles/UpdateComponent.module.css';
 
 interface UpdateComponentProps {
