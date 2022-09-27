@@ -1,7 +1,7 @@
 import React from 'react';
 import { ILoading } from '../../interface/Loading/Loading';
 
-export const Loading: React.FC<ILoading> = ({}) => {
+export const Loading: React.FC<ILoading> = () => {
   return (
     <div className="text-center">
       <div

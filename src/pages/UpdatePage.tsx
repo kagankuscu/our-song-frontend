@@ -5,7 +5,7 @@ import { Loading } from '../components/Loading/Loading';
 import { UpdateComponent } from '../components/update/UpdateComponent';
 import { Song } from '../models/SongModel';
 
-export const UpdatePage: React.FC = ({}) => {
+export const UpdatePage: React.FC = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
   const [song, setSong] = useState<Song>();
@@ -17,6 +17,6 @@ export const UpdatePage: React.FC = ({}) => {
       setLoading(false);
     };
     getData();
-  }, []);
+  }, [id]);
   return <>{loading ? <Loading /> : <UpdateComponent song={song!} />}</>;
 };

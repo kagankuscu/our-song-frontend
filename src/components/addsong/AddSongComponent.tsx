@@ -5,7 +5,7 @@ import { CardBody } from '../Card/CardBody';
 import { CardTitle } from '../Card/CardTitle';
 import { Container } from '../Container/Container';
 import { Form } from '../form/Form';
-import { InputField } from '../input/InputFielad';
+import { InputField } from '../input/InputField';
 import { SelectField } from '../input/SelectField';
 import './AddSong.css';
 import { AddSongButtons } from './AddSongButtons';

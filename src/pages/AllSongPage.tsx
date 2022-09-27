@@ -6,7 +6,7 @@ const getWidth = () =>
   document.documentElement.clientWidth ||
   document.body.clientWidth;
 
-export const AllSongPage: React.FC = ({}) => {
+export const AllSongPage: React.FC = () => {
   const [width, setWidth] = useState<number>(getWidth());
   useEffect(() => {
     const resizeListener = () => {

@@ -5,7 +5,7 @@ import { SongComponent } from '../components/song/SongComponent';
 import { Song } from '../models/SongModel';
 import { Loading } from '../components/Loading/Loading';
 
-export const SongPage: React.FC = ({}) => {
+export const SongPage: React.FC = () => {
   const { id } = useParams();
   const [loading, setLoading] = useState<boolean>(true);
   const [song, setSong] = useState<Song>();
@@ -17,7 +17,7 @@ export const SongPage: React.FC = ({}) => {
       setLoading(false);
     };
     getData();
-  }, []);
+  }, [id]);
 
   return <>{loading ? <Loading /> : <SongComponent song={song!} />} </>;
 };

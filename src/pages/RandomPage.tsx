@@ -4,7 +4,7 @@ import { Loading } from '../components/Loading/Loading';
 import { Random } from '../components/Random/Random';
 import { Song } from '../models/SongModel';
 
-export const RandomPage: React.FC = ({}) => {
+export const RandomPage: React.FC = () => {
   const [song, setSong] = useState<Song>({
     Singer: '',
     Url: '',
@@ -25,7 +25,7 @@ export const RandomPage: React.FC = ({}) => {
     } else {
       getSongs();
     }
-  }, [loading]);
+  }, [loading, songs.length]);
 
   const chooseRandomSong = (min: number, max: number) => {
     const randomNumber = Math.floor(Math.random() * (max - min)) + min;
