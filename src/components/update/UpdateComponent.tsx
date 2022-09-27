@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { ISong } from '../../interface/Song/ISong';
 import { Song } from '../../models/SongModel';
 import { UpdateButtonComponent } from '../buttons/UpdateButtonComponent';
+import { Card } from '../Card/Card';
+import { CardBody } from '../Card/CardBody';
+import { CardTitle } from '../Card/CardTitle';
+import { Container } from '../Container/Container';
 import { Form } from '../form/Form';
 import { InputField } from '../input/InputFielad';
 import { SelectField } from '../input/SelectField';
@@ -23,15 +27,10 @@ export const UpdateComponent: React.FC<ISong> = ({ song }) => {
     }));
   };
   return (
-    <div className="container" style={{ padding: '2rem 0' }}>
-      <div className="card">
-        <div className="card-body">
-          <h5
-            className="card-title"
-            style={{ fontSize: '3rem', paddingBottom: '2rem' }}
-          >
-            Update{' '}
-          </h5>
+    <Container>
+      <Card>
+        <CardBody>
+          <CardTitle title="Update Song" />
           <Form>
             <InputField
               info="Singer"
@@ -62,8 +61,8 @@ export const UpdateComponent: React.FC<ISong> = ({ song }) => {
             />
             <UpdateButtonComponent song={song} updateSong={updateSong} />
           </Form>
-        </div>
-      </div>
-    </div>
+        </CardBody>
+      </Card>
+    </Container>
   );
 };

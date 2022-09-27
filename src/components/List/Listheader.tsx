@@ -2,7 +2,7 @@ import React from 'react';
 import { ILists } from '../../interface/List/ILists';
 import styles from '../../styles/ListComponent.module.css';
 
-export const Listheader: React.FC<ILists> = ({isMobile}) => {
+export const Listheader: React.FC<ILists> = ({ isMobile }) => {
   return (
     <li className={`list-group-item ${styles.colHeader}`}>
       <div className="container">

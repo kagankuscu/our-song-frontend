@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Song } from '../../models/SongModel';
+import { Card } from '../Card/Card';
+import { CardBody } from '../Card/CardBody';
+import { CardTitle } from '../Card/CardTitle';
+import { Container } from '../Container/Container';
 import { Form } from '../form/Form';
 import { InputField } from '../input/InputFielad';
 import { SelectField } from '../input/SelectField';
@@ -24,15 +28,10 @@ export const AddSongComponent: React.FC = () => {
   };
 
   return (
-    <div className="container" style={{ padding: '2rem 0' }}>
-      <div className="card">
-        <div className="card-body">
-          <h5
-            className="card-title"
-            style={{ fontSize: '3rem', paddingBottom: '2rem' }}
-          >
-            Add Song{' '}
-          </h5>
+    <Container>
+      <Card>
+        <CardBody>
+          <CardTitle title="Add Song" />
           <Form>
             <InputField
               name="Singer"
@@ -60,8 +59,8 @@ export const AddSongComponent: React.FC = () => {
             />
             <AddSongButtons song={song} />
           </Form>
-        </div>
-      </div>
-    </div>
+        </CardBody>
+      </Card>
+    </Container>
   );
 };
