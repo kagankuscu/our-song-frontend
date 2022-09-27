@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Loading } from '../components/Loading/Loading';
 import { Random } from '../components/Random/Random';
 import { Song } from '../models/SongModel';
 
@@ -32,5 +33,5 @@ export const RandomPage: React.FC = ({}) => {
     setSong(randomSong);
   };
 
-  return <>{loading ? <h1>Loading</h1> : <Random song={song!} />}</>;
+  return <>{loading ? <Loading /> : <Random song={song!} />}</>;
 };

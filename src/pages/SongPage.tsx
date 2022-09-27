@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { SongComponent } from '../components/song/SongComponent';
 import { Song } from '../models/SongModel';
+import { Loading } from '../components/Loading/Loading';
 
 export const SongPage: React.FC = ({}) => {
   const { id } = useParams();
@@ -18,5 +19,5 @@ export const SongPage: React.FC = ({}) => {
     getData();
   }, []);
 
-  return <>{loading ? <h1>Loading</h1> : <SongComponent song={song!} />} </>;
+  return <>{loading ? <Loading /> : <SongComponent song={song!} />} </>;
 };

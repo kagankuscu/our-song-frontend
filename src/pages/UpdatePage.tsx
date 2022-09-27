@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Loading } from '../components/Loading/Loading';
 import { UpdateComponent } from '../components/update/UpdateComponent';
 import { Song } from '../models/SongModel';
 
@@ -17,5 +18,5 @@ export const UpdatePage: React.FC = ({}) => {
     };
     getData();
   }, []);
-  return <>{loading ? <h1>Loading</h1> : <UpdateComponent song={song!} />}</>;
+  return <>{loading ? <Loading /> : <UpdateComponent song={song!} />}</>;
 };
