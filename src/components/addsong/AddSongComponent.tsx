@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Song } from '../../models/SongModel';
-import styles from '../../styles/UpdateComponent.module.css';
+import { Form } from '../form/Form';
+import { InputField } from '../input/InputFielad';
+import { SelectField } from '../input/SelectField';
 import './AddSong.css';
 import { AddSongButtons } from './AddSongButtons';
 
@@ -31,36 +33,33 @@ export const AddSongComponent: React.FC = () => {
           >
             Add Song{' '}
           </h5>
-          <form className={styles.formContainer}>
-            <label className='add-song-label'>Singer Name:</label>
-            <input
-              type="text"
+          <Form>
+            <InputField
               name="Singer"
-              placeholder=""
+              info="Singer"
+              type="text"
               onChange={handleChange}
             />
-            <label className='add-song-label'>Song Name:</label>
-            <input
-              type="text"
+            <InputField
               name="SongName"
-              placeholder=""
-              onChange={handleChange}
-            />
-            <label className='add-song-label'>Who Like the this song:</label>
-            <select name="WhoLike" onChange={handleChange}>
-              <option value="Empty"></option>
-              <option value="Kagan">Kagan</option>
-              <option value="Emine">Emine</option>
-            </select>
-            <label className='add-song-label'>Url:</label>
-            <input
+              info="Song Name"
               type="text"
-              name="Url"
-              placeholder=""
               onChange={handleChange}
             />
-            <AddSongButtons song={song}/>
-          </form>
+            <SelectField
+              name="WhoLike"
+              firstOption="Kagan"
+              secondOption="Emine"
+              onChange={handleChange}
+            />
+            <InputField
+              name="Url"
+              type="text"
+              onChange={handleChange}
+              info="Url"
+            />
+            <AddSongButtons song={song} />
+          </Form>
         </div>
       </div>
     </div>
