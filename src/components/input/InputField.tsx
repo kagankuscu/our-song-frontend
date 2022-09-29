@@ -20,7 +20,7 @@ export const InputField: React.FC<IInputField> = ({
         className="form-control update-input"
         aria-label="Sizing example input"
         aria-describedby="inputGroup-sizing-default"
-        placeholder={value}
+        value={value}
         onChange={onChange}
       />
     </div>

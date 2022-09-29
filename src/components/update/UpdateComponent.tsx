@@ -11,13 +11,7 @@ import { InputField } from '../input/InputField';
 import { SelectField } from '../input/SelectField';
 
 export const UpdateComponent: React.FC<ISong> = ({ song }) => {
-  const [updateSong, setUpdateSong] = useState<Song>({
-    Singer: '',
-    SongName: '',
-    WhoLike: '',
-    Url: '',
-    _id: '',
-  });
+  const [updateSong, setUpdateSong] = useState<Song>(song);
   const handleChange = (event: any) => {
     const value = event.target.value;
     const name = event.target.name;
@@ -36,14 +30,14 @@ export const UpdateComponent: React.FC<ISong> = ({ song }) => {
               info="Singer"
               type="text"
               name="Singer"
-              value={song.Singer}
+              value={updateSong.Singer}
               onChange={handleChange}
             />
             <InputField
               info="Song Name"
               name="SongName"
               type="text"
-              value={song.SongName}
+              value={updateSong.SongName}
               onChange={handleChange}
             />
             <SelectField
@@ -56,7 +50,7 @@ export const UpdateComponent: React.FC<ISong> = ({ song }) => {
               info="Url"
               name="Url"
               type="text"
-              value={song.Url}
+              value={updateSong.Url}
               onChange={handleChange}
             />
             <UpdateButtonComponent song={song} updateSong={updateSong} />
