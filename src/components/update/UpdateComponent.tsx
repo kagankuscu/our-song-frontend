@@ -44,6 +44,7 @@ export const UpdateComponent: React.FC<ISong> = ({ song }) => {
               name="WhoLike"
               firstOption="Kagan"
               secondOption="Emine"
+              thirdOption="Kagan-Emine"
               onChange={handleChange}
             />
             <InputField

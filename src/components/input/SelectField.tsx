@@ -5,6 +5,7 @@ export const SelectField: React.FC<ISelectField> = ({
   name,
   firstOption,
   secondOption,
+  thirdOption,
   onChange,
 }) => {
   return (
@@ -19,6 +20,7 @@ export const SelectField: React.FC<ISelectField> = ({
         <option value="Empty">Choose...</option>
         <option value={firstOption}>{firstOption}</option>
         <option value={secondOption}>{secondOption}</option>
+        <option value={thirdOption}>{thirdOption}</option>
       </select>
     </div>
   );

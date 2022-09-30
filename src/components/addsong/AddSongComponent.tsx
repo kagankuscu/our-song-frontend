@@ -49,6 +49,7 @@ export const AddSongComponent: React.FC = () => {
               name="WhoLike"
               firstOption="Kagan"
               secondOption="Emine"
+              thirdOption="Kagan-Emine"
               onChange={handleChange}
             />
             <InputField
