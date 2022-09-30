@@ -19,6 +19,10 @@
   background-color: #e44ec38b;
 }
 
+.sort {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 600px) {
   #item {
     font-size: var(--btn-fs-small);

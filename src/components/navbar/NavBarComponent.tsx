@@ -16,7 +16,7 @@ export const NavBarComponent: React.FC = ({}) => {
                 <div
                   className={`${navbarStyle.brandName} ${navbarStyle.cursorHover} ${styles.preventSelect}`}
                 >
-                  KE
+                  K&E
                 </div>
               </div>
             </div>
