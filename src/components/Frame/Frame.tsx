@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 import { IFrame } from '../../interface/Frame/IFrame';
 
 export const Frame: React.FC<IFrame> = ({ url }) => {
@@ -13,14 +14,5 @@ export const Frame: React.FC<IFrame> = ({ url }) => {
   useEffect(() => {
     splitUrl();
   }, []);
-  return (
-    <iframe
-      src={src}
-      width="100%"
-      height="480"
-      title="A YouTube video"
-      frameBorder="0"
-      allowFullScreen
-    ></iframe>
-  );
+  return <ReactPlayer url={url} playing={true} width="100%" height="50%" />;
 };
