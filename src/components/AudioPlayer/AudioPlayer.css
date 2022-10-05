@@ -1,0 +1,72 @@
+.player-container {
+  --bg--color: #c71585;
+  --bg-color-hover: #ffc0cb;
+  --color-white: #fff;
+  --color-shadow: #878787;
+  --fs-500: 2.5rem;
+  --p-2: 2rem;
+  --p-3: 3rem;
+  --width-100: 100%;
+  --width-15: 15px;
+  --width-20: 20px;
+  --mb-1: 1rem;
+  --br-100: 16px;
+  --br-50: 8px;
+  --height-10: 10px;
+  --height-15: 15px;
+  --height-20: 20px;
+  --color-thumb: #ff69b4;
+  box-sizing: border-box;
+  width: var(--width-100);
+  background-color: var(--bg--color);
+  padding: var(--p-2);
+  border-radius: var(--br-100);
+}
+.player-buttons {
+  display: flex;
+  gap: var(--p-2);
+  align-items: center;
+  justify-content: center;
+}
+.player-buttons > button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-bottom: var(--mb-1);
+  color: var(--color-white);
+  font-size: var(--fs-500);
+}
+
+.player-buttons > button:hover {
+  color: var(--bg-color-hover);
+}
+
+.process {
+  width: var(--width-100);
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: var(--br-50);
+}
+
+.process:focus {
+  outline: none;
+}
+
+.process::-webkit-slider-runnable-track {
+  width: var(--width-100);
+  height: var(--height-10);
+  cursor: pointer;
+  transition: 0.2 ease-in;
+  /* animate: 0.2; */
+  box-shadow: 1px 1px 1px var(--color-shadow);
+  border-radius: var(--br-50);
+}
+.process::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: var(--height-20);
+  width: var(--width-20);
+  border-radius: var(--br-100);
+  background: var(--color-thumb);
+  cursor: pointer;
+  margin-top: -4.65px;
+}
