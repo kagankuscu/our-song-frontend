@@ -25,7 +25,11 @@ export function AudioPlayer() {
           <AiFillForward />
         </button>
       </div>
-      <input className="process" type="range" name="process" id="process" />
+      <div className="process-container">
+        <span>0:00</span>
+        <input className="process" type="range" name="process" id="process" />
+        <span>2:49</span>
+      </div>
     </div>
   );
 }

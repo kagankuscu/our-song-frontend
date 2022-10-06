@@ -1,5 +1,6 @@
 import React from 'react';
 import { ISong } from '../../interface/Song/ISong';
+import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
 import { ButtonsComponent } from '../buttons/ButtonsComponent';
 import { Card } from '../Card/Card';
 import { CardBody } from '../Card/CardBody';
@@ -9,8 +10,16 @@ import { Frame } from '../Frame/Frame';
 export const Random: React.FC<ISong> = ({ song }) => {
   return (
     <>
-      <Frame url={song.Url} />
-      <div className="container">
+      <div
+        className="container"
+        style={{
+          height: 'calc(100% - 116px)',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '1rem',
+          justifyContent: 'center',
+        }}
+      >
         <Card>
           <CardBody>
             <CardTitle title={song?.Singer} />
@@ -19,6 +28,7 @@ export const Random: React.FC<ISong> = ({ song }) => {
             <ButtonsComponent song={song!} />
           </CardBody>
         </Card>
+        <AudioPlayer />
       </div>
     </>
   );

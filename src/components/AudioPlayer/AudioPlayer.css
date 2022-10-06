@@ -3,7 +3,8 @@
   --bg-color-hover: #ffc0cb;
   --color-white: #fff;
   --color-shadow: #878787;
-  --fs-500: 2.5rem;
+  --fs-500: 3rem;
+  --p-1: 1rem;
   --p-2: 2rem;
   --p-3: 3rem;
   --width-100: 100%;
@@ -19,7 +20,7 @@
   box-sizing: border-box;
   width: var(--width-100);
   background-color: var(--bg--color);
-  padding: var(--p-2);
+  padding: var(--p-1) var(--p-2) var(--p-2);
   border-radius: var(--br-100);
 }
 .player-buttons {
@@ -40,7 +41,13 @@
 .player-buttons > button:hover {
   color: var(--bg-color-hover);
 }
-
+.process-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--p-1);
+  color: var(--color-white);
+}
 .process {
   width: var(--width-100);
   appearance: none;
