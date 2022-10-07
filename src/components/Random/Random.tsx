@@ -28,7 +28,7 @@ export const Random: React.FC<ISong> = ({ song }) => {
             <ButtonsComponent song={song!} />
           </CardBody>
         </Card>
-        <AudioPlayer />
+        <AudioPlayer song="songs/GALENA x DJ DAMYAN x COSTI - WELCOME TO BULGARIA.mp3" />
       </div>
     </>
   );
