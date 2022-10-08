@@ -36,8 +36,8 @@ export function AudioPlayer({ song }: ISongSource) {
   };
   const whilePlaying = () => {
     progressBar.current!.value = `${audioRef.current?.currentTime}`;
-    setCurrentTime(parseInt(progressBar.current!.value));
     animationRef.current = requestAnimationFrame(whilePlaying);
+    changePlayerCurrentTime();
     if (audioRef.current?.ended) {
       setCurrentTime(0);
       setIsPlay(false);
@@ -47,7 +47,15 @@ export function AudioPlayer({ song }: ISongSource) {
   };
   const changeRange = () => {
     audioRef.current!.currentTime = parseInt(progressBar.current!.value);
+    changePlayerCurrentTime();
+  };
+
+  const changePlayerCurrentTime = () => {
     setCurrentTime(parseInt(progressBar.current!.value));
+    progressBar.current?.style.setProperty(
+      '--seek-before-width',
+      `${Number(progressBar.current.value) / (duration * 100)}%`
+    );
   };
 
   const backThirty = () => {

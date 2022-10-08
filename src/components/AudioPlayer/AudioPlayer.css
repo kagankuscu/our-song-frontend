@@ -49,14 +49,68 @@
   color: var(--color-white);
 }
 .process {
+  --seek-before-width: 0;
+  --seek-before-color: var(--bg-color-hover);
   width: var(--width-100);
+  position: relative;
   appearance: none;
+  height: var(--height-10);
   -webkit-appearance: none;
+  outline: none;
   border-radius: var(--br-50);
 }
 
 .process:focus {
   outline: none;
+}
+
+.process::before {
+  content: '';
+  height: var(--height-10);
+  width: var(--seek-before-width);
+  background-color: var(--seek-before-color);
+  border-top-left-radius: var(--br-50);
+  border-bottom-left-radius: var(--br-50);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.process::-moz-range-progress {
+  background-color: var(--bg-color-hover);
+  height: var(--height-10);
+  border-top-left-radius: var(--br-50);
+  border-bottom-left-radius: var(--br-50);
+}
+
+.process::-moz-range-track {
+  position: relative;
+  appearance: none;
+  height: var(--height-10);
+  outline: none;
+  width: var(--width-100);
+  border-radius: var(--br-50);
+}
+
+.process::-moz-focus-outer {
+  border: 0;
+}
+
+.process::-moz-range-thumb {
+  height: var(--height-20);
+  width: var(--width-20);
+  border-radius: var(--br-100);
+  background: var(--color-thumb);
+  cursor: pointer;
+  position: relative;
+  border: none;
+  z-index: 3;
+}
+
+.process:active::-moz-range-thumb {
+  transform: scale(1.2);
 }
 
 .process::-webkit-slider-runnable-track {
@@ -76,4 +130,11 @@
   background: var(--color-thumb);
   cursor: pointer;
   margin-top: -4.65px;
+  position: relative;
+  z-index: 3;
+}
+
+.progress:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+  background-color: blue;
 }
