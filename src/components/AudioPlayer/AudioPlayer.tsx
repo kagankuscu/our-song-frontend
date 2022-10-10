@@ -54,7 +54,7 @@ export function AudioPlayer({ song }: ISongSource) {
     setCurrentTime(parseInt(progressBar.current!.value));
     progressBar.current?.style.setProperty(
       '--seek-before-width',
-      `${Number(progressBar.current.value) / (duration * 100)}%`
+      `${(Number(progressBar.current.value) / duration) * 100}%`
     );
   };
 
