@@ -2,10 +2,7 @@ import React from 'react';
 import { ISong } from '../../interface/Song/ISong';
 import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
 import { ButtonsComponent } from '../buttons/ButtonsComponent';
-import { Card } from '../Card/Card';
-import { CardBody } from '../Card/CardBody';
-import { CardTitle } from '../Card/CardTitle';
-import { Frame } from '../Frame/Frame';
+import { Card, CardBody, CardTitle } from '../Card/CardIndex';
 
 export const Random: React.FC<ISong> = ({ song }) => {
   return (
@@ -28,7 +25,7 @@ export const Random: React.FC<ISong> = ({ song }) => {
             <ButtonsComponent song={song!} />
           </CardBody>
         </Card>
-        <AudioPlayer song="songs/GALENA x DJ DAMYAN x COSTI - WELCOME TO BULGARIA.mp3" />
+        <AudioPlayer song={song.Url} />
       </div>
     </>
   );
