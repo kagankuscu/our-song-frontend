@@ -1,7 +1,28 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 import { Song } from '../models/SongModel';
+import { PaginateModel } from '../models/PaginateModel';
+import { url } from 'inspector';
 
+const useAxios = (configObj: { method: string, url: string, data?: string }): [PaginateModel, boolean] => {
+    const [data, setData] = useState<PaginateModel | null>(null);
+    const [loading, setLoading] = useState<boolean>(true)
+    useEffect(() => {
+        const getData = async () => {
+            const fetch = await axios({
+                method: configObj.method,
+                url: configObj.url,
+                data: configObj.data
+            })
+            console.log(fetch.data)
+            setData(fetch.data.result);
+            setLoading(false)
+        };
+
+        getData();
+    }, [configObj.url]);
+    return [data!, loading]
+}
 
 const useFetchById = (id: string): [Song, boolean] => {
     const [data, setData] = useState<Song | null>(null);
@@ -19,4 +40,4 @@ const useFetchById = (id: string): [Song, boolean] => {
     return [data!, loading]
 }
 
-export default useFetchById;
+export { useFetchById, useAxios };
