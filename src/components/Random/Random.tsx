@@ -1,8 +1,7 @@
 import React from 'react';
 import { ISong } from '../../interface/Song/ISong';
 import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
-import { ButtonsComponent } from '../buttons/ButtonsComponent';
-import { Card, CardBody, CardTitle } from '../Card/CardIndex';
+import { SongInfo } from '../SongInfo/SongInfo';
 
 export const Random: React.FC<ISong> = ({ song }) => {
   return (
@@ -17,14 +16,7 @@ export const Random: React.FC<ISong> = ({ song }) => {
           justifyContent: 'center',
         }}
       >
-        <Card>
-          <CardBody>
-            <CardTitle title={song?.Singer} />
-            <h5 className="card-text">{song?.SongName}</h5>
-            <p className="card-text">{song?.WhoLike}</p>
-            <ButtonsComponent song={song!} />
-          </CardBody>
-        </Card>
+        <SongInfo song={song} />
         <AudioPlayer song={song.Url} />
       </div>
     </>
