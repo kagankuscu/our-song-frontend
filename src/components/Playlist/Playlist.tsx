@@ -5,9 +5,7 @@ import { Loading } from '../Loading/Loading';
 import { Pagination } from '../Pagination/Pagination';
 import { PlaylistSongs } from './PlaylistSongs';
 
-interface PlaylistProps {}
-
-export const Playlist: React.FC<PlaylistProps> = ({}) => {
+export const Playlist: React.FC = () => {
   const [searchParams] = useSearchParams();
   const [data, loading] = useAxios({
     method: 'get',
@@ -26,10 +24,10 @@ export const Playlist: React.FC<PlaylistProps> = ({}) => {
       ) : Array.isArray(data.pageOfItems) ? (
         <>
           <PlaylistSongs songs={data.pageOfItems} />
-          <Pagination pages={data.pager.pages} />
+          <Pagination pager={data.pager} />
         </>
       ) : (
-        <Pagination pages={data.pager.pages} />
+        <Pagination pager={data.pager} />
       )}
     </div>
   );

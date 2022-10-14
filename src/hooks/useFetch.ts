@@ -1,8 +1,7 @@
-import { useState, useEffect } from 'react'
 import axios from 'axios';
-import { Song } from '../models/SongModel';
+import { useEffect, useState } from 'react';
 import { PaginateModel } from '../models/PaginateModel';
-import { url } from 'inspector';
+import { Song } from '../models/SongModel';
 
 const useAxios = (configObj: { method: string, url: string, data?: string }): [PaginateModel, boolean] => {
     const [data, setData] = useState<PaginateModel | null>(null);

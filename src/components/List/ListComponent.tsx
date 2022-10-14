@@ -2,6 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { ILists } from '../../interface/List/ILists';
+import { IPager, IPagination } from '../../interface/Pagination/IPagination';
 import { Song } from '../../models/SongModel';
 import styles from '../../styles/ListComponent.module.css';
 import { Loading } from '../Loading/Loading';
@@ -12,7 +13,7 @@ import { Listheader } from './Listheader';
 export const ListComponent: React.FC<ILists> = ({ isMobile }) => {
   const [listOfSong, setListOfSong] = useState<Song[] | undefined>();
   const [loading, setLoading] = useState<boolean>(true);
-  const [pagePaginate, setPagePaginate] = useState<number[]>([0, 1, 2]);
+  const [pager, setPager] = useState<IPager>();
   const [searchParams] = useSearchParams();
   const page = searchParams.get('page') || 1;
   const pageSize = 20;
@@ -30,11 +31,13 @@ export const ListComponent: React.FC<ILists> = ({ isMobile }) => {
           `${process.env.REACT_APP_SONGS}?sort=${sortVals[0]}&sort=${sortVals[1]}&page=${page}&pageSize=${pageSize}`
         );
       }
+      console.log(data.data.result.pager);
       setListOfSong(data.data.result.pageOfItems);
-      setPagePaginate(data.data.result.pager.pages);
+      setPager(data.data.result.pager);
       setLoading(false);
     };
     getData();
+    console.log(`pager: ${pager}`);
   }, [searchParams]);
   return (
     <>
@@ -50,7 +53,7 @@ export const ListComponent: React.FC<ILists> = ({ isMobile }) => {
                 ))
               : null}
           </ul>
-          <Pagination pages={pagePaginate!} />
+          <Pagination pager={pager!} />
         </div>
       )}
     </>
