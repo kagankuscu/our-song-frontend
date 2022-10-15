@@ -7,11 +7,15 @@ export const Pagination: React.FC<IPagination> = ({ pager }) => {
   return (
     <nav aria-label="Page navigation example" style={{ width: '100%' }}>
       <ul className="pagination pagination-sm justify-content-center">
-        {/* <li className="page-item">
-          <Link className="page-link" to={`?page=1`} aria-label="Previous">
+        <li className="page-item">
+          <Link
+            className="page-link"
+            to={`?page=${pager.startPage}`}
+            aria-label="Previous"
+          >
             <span aria-hidden="true">&laquo;</span>
           </Link>
-        </li> */}
+        </li>
         {pager.pages.map((page) => (
           <li className="page-item">
             <Link className="page-link" to={`?page=${page}`}>

@@ -1,4 +1,3 @@
-import { Song } from "../../models/SongModel";
 
 export interface IPagination {
     pager: IPager;
@@ -7,4 +6,5 @@ export interface IPagination {
 export interface IPager {
     pages: number[];
     totalPages: number;
+    startPage: number;
 }
