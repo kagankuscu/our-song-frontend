@@ -1,12 +1,13 @@
 import React from 'react';
 import { IPagination } from '../../interface/Pagination/IPagination';
 import { Link } from 'react-router-dom';
+import './PaginationStyle.css';
 
 export const Pagination: React.FC<IPagination> = ({ pager }) => {
   console.log(pager);
   return (
-    <nav aria-label="Page navigation example" style={{ width: '100%' }}>
-      <ul className="pagination pagination-sm justify-content-center">
+    <nav aria-label="Page navigation" style={{ width: '100%' }}>
+      <ul className="pagination pagination-sm justify-content-center paginationContainer">
         <li className="page-item">
           <Link
             className="page-link"
