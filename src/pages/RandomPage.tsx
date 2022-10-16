@@ -1,7 +1,8 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Loading } from '../components/Loading/Loading';
 import { Random } from '../components/Random/Random';
+import { ResponseModel } from '../models/ResponseModel';
 import { Song } from '../models/SongModel';
 
 export const RandomPage: React.FC = () => {
@@ -15,9 +16,17 @@ export const RandomPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [songs, setSongs] = useState<Song[]>([]);
   useEffect(() => {
+    console.log(`useEffect`);
+    const getRandomPage = (): number => {
+      const randomNumber = Math.floor(Math.random() * (10000 - 1)) + 1;
+      return randomNumber;
+    };
     const getSongs = async () => {
-      const songsList: any = await axios.get(`${process.env.REACT_APP_SONGS}`);
-      setSongs(songsList.data.result);
+      const songsList: AxiosResponse<ResponseModel> = await axios.get(
+        `${process.env.REACT_APP_SONGS}?page=${getRandomPage()}`
+      );
+
+      setSongs(songsList.data.result.pageOfItems);
       setLoading(false);
     };
     if (!loading) {
@@ -25,7 +34,7 @@ export const RandomPage: React.FC = () => {
     } else {
       getSongs();
     }
-  }, [loading, songs.length]);
+  }, [loading]);
 
   const chooseRandomSong = (min: number, max: number) => {
     const randomNumber = Math.floor(Math.random() * (max - min)) + min;
