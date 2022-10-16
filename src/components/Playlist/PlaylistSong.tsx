@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ISong } from '../../interface/Song/ISong';
 import './PlaylistStyle.css';
 
 export const PlaylistSong: React.FC<ISong> = ({ song }) => {
+  const navigate = useNavigate();
+  const [page, setPage] = useState<number>(1);
+  const [getPage] = useSearchParams();
+  useEffect(() => {
+    const getP = getPage.get('page');
+    if (getP) {
+      setPage(parseInt(getP));
+    }
+  }, [getPage]);
+  const handlePlayOtherSong = () => {
+    // this is new song url to play
+    navigate(`/player/${song._id}?page=${page}`);
+    // this is for refreshing page
+    navigate(0);
+  };
   return (
-    <li
-      className="list-group-item my-list"
-      onClick={() => console.log(`${song.Singer}`)}
-    >
+    <li className="list-group-item my-list" onClick={handlePlayOtherSong}>
       <div
         style={{
           display: 'flex',
