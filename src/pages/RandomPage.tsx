@@ -16,7 +16,6 @@ export const RandomPage: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [songs, setSongs] = useState<Song[]>([]);
   useEffect(() => {
-    console.log(`useEffect`);
     const getRandomPage = (): number => {
       const randomNumber = Math.floor(Math.random() * (10000 - 1)) + 1;
       return randomNumber;
