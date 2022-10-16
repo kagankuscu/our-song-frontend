@@ -6,8 +6,8 @@ import { PlaylistSong } from './PlaylistSong';
 export const PlaylistSongs: React.FC<ISongs> = ({ songs }) => {
   return (
     <ul className="list-group" style={{ paddingBottom: '1rem' }}>
-      {songs.map((song: Song) => (
-        <PlaylistSong song={song} />
+      {songs.map((song: Song, id: number) => (
+        <PlaylistSong key={id} song={song} />
       ))}
     </ul>
   );

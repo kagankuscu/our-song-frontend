@@ -1,0 +1,4 @@
+.my-list:hover {
+  --my-pink-300: #eee9ef;
+  background: var(--my-pink-300);
+}

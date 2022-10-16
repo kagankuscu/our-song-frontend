@@ -14,20 +14,20 @@ export const Playlist: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: 'gray',
+        backgroundColor: '#c71585',
         height: '100%',
-        padding: '10px',
+        padding: '2.5rem 1rem',
       }}
     >
       {loading ? (
         <Loading />
-      ) : Array.isArray(data.pageOfItems) ? (
-        <>
-          <PlaylistSongs songs={data.pageOfItems} />
-          <Pagination pager={data.pager} />
-        </>
       ) : (
-        <Pagination pager={data.pager} />
+        data.pageOfItems && (
+          <>
+            <PlaylistSongs songs={data.pageOfItems} />
+            <Pagination pager={data.pager} />
+          </>
+        )
       )}
     </div>
   );
