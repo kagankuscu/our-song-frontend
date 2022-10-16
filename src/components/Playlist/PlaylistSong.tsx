@@ -4,7 +4,10 @@ import './PlaylistStyle.css';
 
 export const PlaylistSong: React.FC<ISong> = ({ song }) => {
   return (
-    <li className="list-group-item my-list">
+    <li
+      className="list-group-item my-list"
+      onClick={() => console.log(`${song.Singer}`)}
+    >
       <div
         style={{
           display: 'flex',

@@ -13,7 +13,6 @@ const useAxios = (configObj: { method: string, url: string, data?: string }): [P
                 url: configObj.url,
                 data: configObj.data
             })
-            console.log(fetch.data)
             setData(fetch.data.result);
             setLoading(false)
         };
