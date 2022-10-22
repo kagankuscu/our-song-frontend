@@ -10,6 +10,7 @@
 }
 #lists {
   margin: 20px 10px;
+  padding: 0 0 55px 0;
 }
 
 .colHeader {
@@ -21,6 +22,15 @@
 
 .sort {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  #item {
+    font-size: 1.2rem;
+  }
+  .colHeader {
+    font-size: 1.32rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
