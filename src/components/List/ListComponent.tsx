@@ -45,7 +45,7 @@ export const ListComponent: React.FC<ILists> = ({ isMobile }) => {
         <Loading />
       ) : (
         <div id={styles.lists}>
-          <ul className="list-group">
+          <ul className="list-group" style={{ marginBottom: '1rem' }}>
             <Listheader isMobile={isMobile} />
             {listOfSong !== undefined
               ? listOfSong.map((list) => (

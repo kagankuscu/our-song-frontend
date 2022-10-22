@@ -138,3 +138,9 @@
   transform: scale(1.2);
   background-color: blue;
 }
+
+@media only screen and (min-width: 992px) {
+  .player-buttons {
+    gap: var(--p-1);
+  }
+}

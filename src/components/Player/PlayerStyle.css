@@ -21,6 +21,7 @@
 
 @media only screen and (max-width: 992px) {
   .all-container {
+    height: auto;
     margin-top: 2rem;
     flex-direction: column;
     justify-content: left;

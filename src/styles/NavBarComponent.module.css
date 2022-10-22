@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing%20Script);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
 :root {
-  --my-beige-color:beige;
+  --my-beige-color: beige;
   --link-color: var(--my-beige-color);
   --link-hover-color: #adad99;
 }
@@ -75,6 +75,9 @@
   }
 
   .brandName {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  .myNavBrand {
+    font-size: 2.35rem;
   }
 }
