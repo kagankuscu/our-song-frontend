@@ -1,8 +1,8 @@
 import axios, { AxiosResponse } from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Loading } from '../components/Loading/Loading';
 import { Random } from '../components/Random/Random';
-import { ResponseModel } from '../models/ResponseModel';
+import { ResponseModelSong } from '../models/ResponseModel';
 import { Song } from '../models/SongModel';
 
 export const RandomPage: React.FC = () => {
@@ -14,32 +14,21 @@ export const RandomPage: React.FC = () => {
     SongName: '',
   });
   const [loading, setLoading] = useState<boolean>(true);
-  const [songs, setSongs] = useState<Song[]>([]);
+  const runOnce = useRef<boolean>(true);
   useEffect(() => {
-    const getRandomPage = (): number => {
-      const randomNumber = Math.floor(Math.random() * (10000 - 1)) + 1;
-      return randomNumber;
-    };
     const getSongs = async () => {
-      const songsList: AxiosResponse<ResponseModel> = await axios.get(
-        `${process.env.REACT_APP_SONGS}?page=${getRandomPage()}`
+      const songsList: AxiosResponse<ResponseModelSong> = await axios.get(
+        `${process.env.REACT_APP_RANDOMSONG}`
       );
-
-      setSongs(songsList.data.result.pageOfItems);
+      console.log(songsList.data);
+      setSong(songsList.data.result);
       setLoading(false);
     };
-    if (!loading) {
-      chooseRandomSong(1, songs.length + 1);
-    } else {
+    if (runOnce.current) {
+      runOnce.current = false;
       getSongs();
     }
-  }, [loading]);
+  }, []);
 
-  const chooseRandomSong = (min: number, max: number) => {
-    const randomNumber = Math.floor(Math.random() * (max - min)) + min;
-    const randomSong = songs[randomNumber];
-    setSong(randomSong);
-  };
-
-  return <>{loading ? <Loading /> : <Random song={song!} />}</>;
+  return <>{loading ? <Loading /> : <Random song={song} />}</>;
 };
