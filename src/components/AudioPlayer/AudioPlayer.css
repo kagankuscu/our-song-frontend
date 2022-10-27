@@ -1,8 +1,4 @@
 .player-container {
-  --bg--color: #c71585;
-  --bg-color-hover: #ffc0cb;
-  --color-white: #fff;
-  --color-shadow: #878787;
   --fs-500: 3rem;
   --p-1: 1rem;
   --p-2: 2rem;
@@ -16,7 +12,6 @@
   --height-10: 10px;
   --height-15: 15px;
   --height-20: 20px;
-  --color-thumb: #ff69b4;
   box-sizing: border-box;
   width: var(--width-100);
   background-color: var(--bg--color);
@@ -136,7 +131,6 @@
 
 .progress:active::-webkit-slider-thumb {
   transform: scale(1.2);
-  background-color: blue;
 }
 
 @media only screen and (min-width: 992px) {

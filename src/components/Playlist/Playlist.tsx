@@ -14,7 +14,7 @@ export const Playlist: React.FC = () => {
   return (
     <div
       style={{
-        backgroundColor: '#c71585',
+        backgroundColor: 'var(--bg--color)',
         height: '100%',
         padding: '2.5rem 1rem',
       }}
