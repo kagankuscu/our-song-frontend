@@ -5,5 +5,6 @@ export interface ISelectField {
     firstOption: string;
     secondOption: string;
     thirdOption: string;
+    value?: string;
     onChange: React.ChangeEventHandler;
 }

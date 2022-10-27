@@ -6,6 +6,7 @@ export const SelectField: React.FC<ISelectField> = ({
   firstOption,
   secondOption,
   thirdOption,
+  value,
   onChange,
 }) => {
   return (
@@ -15,6 +16,7 @@ export const SelectField: React.FC<ISelectField> = ({
         className="form-select"
         id="inputGroupSelect01"
         name={name}
+        value={value}
         onChange={onChange}
       >
         <option value="Empty">Choose...</option>
