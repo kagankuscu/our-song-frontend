@@ -1,17 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { IButton } from '../../interface/Buttons/IButton';
 import style from '../../styles/Button.module.css';
 
-
-export const Open: React.FC<IButton> = ({song}) => {
+export const Open: React.FC<IButton> = ({ song }) => {
   return (
-    <a
-      href={song!.Url}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Link
+      to={`/player/${song?._id}`}
       className={`${style.btn} ${style.btnFs} ${style.btnOutline}`}
     >
-      Open
-    </a>
+      Play
+    </Link>
   );
 };

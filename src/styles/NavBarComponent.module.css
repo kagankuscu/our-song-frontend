@@ -1,24 +1,22 @@
 @import url(https://fonts.googleapis.com/css?family=Dancing%20Script);
 @import url(https://fonts.googleapis.com/css?family=Lobster);
-:root {
-  --my-beige-color:beige;
-  --link-color: var(--my-beige-color);
-  --link-hover-color: #adad99;
-}
 
 .neonText {
   color: var(--my-beige-color);
-  text-shadow: 0 0 7px #e4e, 0 0 10px #e4c, 0 0 21px #e4c, 0 0 42px #e44ec3,
-    0 0 82px #e44ec3, 0 0 92px #e44ec3, 0 0 102px #e44ec3, 0 0 151px #e44ec3;
+  text-shadow: 0 0 7px var(--my-pink-400), 0 0 10px var(--my-pink-450),
+    0 0 21px var(--my-pink-450), 0 0 42px var(--my-pink-100),
+    0 0 82px var(--my-pink-100), 0 0 92px var(--my-pink-100),
+    0 0 102px var(--my-pink-100), 0 0 151px var(--my-pink-100);
 }
 
 .myNavbar {
-  background-color: #5a0834;
+  background-color: var(--my-pink-200);
 }
 
 .myNavBrand {
   font-family: 'Dancing Script', serif;
   font-size: 3rem;
+  margin-left: 2rem;
 }
 
 .myFlex {
@@ -27,10 +25,10 @@
   align-items: center;
 }
 
-.linkColor{
-  color:var(--link-color) !important;
+.linkColor {
+  color: var(--link-color) !important;
 }
-.linkColor:hover{
+.linkColor:hover {
   color: var(--link-hover-color) !important;
 }
 
@@ -42,14 +40,18 @@
   justify-content: center;
 }
 .circle {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border: 3px solid var(--my-beige-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(#5a0834, #9d0b51, #e44ec3);
+  background: linear-gradient(
+    var(--my-pink-200),
+    var(--my-color-500),
+    var(--my-pink-100)
+  );
 }
 
 .brandName {
@@ -74,6 +76,9 @@
   }
 
   .brandName {
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  .myNavBrand {
+    font-size: 2.35rem;
   }
 }

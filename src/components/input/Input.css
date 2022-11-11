@@ -1,0 +1,9 @@
+.text {
+  background-color: var(--my-pink-50);
+  color: var(--my-pink-200);
+}
+
+.input:focus {
+  border-color: var(--my-pink-100) !important;
+  box-shadow: 0 0 0 0.25rem var(--my-box-shadow-color) !important;
+}

@@ -1,0 +1,36 @@
+:root {
+  --white-color: #fff;
+  --my-pink-50: hsl(313, 74%, 60%, 25%);
+  --my-pink-100: #e44ec3;
+  --my-pink-150: #ee44ccbf;
+  --my-pink-175: #e44ec3bf;
+  --my-pink-200: #5a0834;
+  --my-pink-250: #5a0834bf;
+  --my-pink-300: #eee9ef;
+  --my-pink-400: #e4e;
+  --my-pink-450: #e4c;
+  --my-pink-500: #9d0b51;
+
+  --my-box-shadow-color: rgba(222, 110, 186, 0.25);
+
+  /* NavBar Component */
+  --my-beige-color: beige;
+  --link-color: var(--my-beige-color);
+  --link-hover-color: #adad99;
+
+  /* Audio Player Colors */
+  --bg--color: #c71585;
+  --bg-color-hover: #ffc0cb;
+  --color-white: #fff;
+  --color-shadow: #878787;
+  --color-thumb: #ff69b4;
+
+  --btn-fs-normal: 1.32rem;
+  --btn-fs-small: 0.89rem;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
